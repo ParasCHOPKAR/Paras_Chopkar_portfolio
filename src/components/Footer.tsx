@@ -49,7 +49,7 @@ export default function Footer() {
               <div className="flex flex-col sm:flex-row items-start gap-5">
                 {/* College Logo */}
                 <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 bg-white relative">
-                  <Image src="/vit-logo.jfif" alt="VIT Pune Logo" fill className="object-contain p-1" />
+                  <Image src="/vit-logo.jpeg" alt="VIT Pune Logo" fill className="object-contain p-1" />
                 </div>
                 
                 {/* Details */}
