@@ -130,15 +130,17 @@ export default function Projects() {
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <AnimatePresence>
           {filteredProjects.map((project) => (
-            <motion.div
+            <motion.a
               key={project.id}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               layout
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4 }}
-              onClick={() => window.open(project.link, '_blank')}
-              className="glass-card glass-card-hover overflow-hidden group cursor-pointer"
+              className="glass-card glass-card-hover overflow-hidden group cursor-pointer block"
             >
               {/* Image Container */}
               <div className="h-64 bg-card relative overflow-hidden border-b border-black/5 dark:border-white/5">
@@ -175,7 +177,7 @@ export default function Projects() {
                    </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </AnimatePresence>
       </motion.div>
