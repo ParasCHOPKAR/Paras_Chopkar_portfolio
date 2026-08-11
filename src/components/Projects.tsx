@@ -71,12 +71,12 @@ const projects = [
   },
   {
     id: 9,
-    title: "Diamond Home Decor",
+    title: "Aqua Green Techs",
     category: "Business",
-    description: "Beautiful online catalog and store for interior decor products.",
-    tech: "Frontend",
-    image: "/my-project/dimond.jpeg",
-    link: "https://diamondhomedecor.com/",
+    description: "Static corporate website highlighting eco-friendly technology solutions.",
+    tech: "HTML, CSS, JS",
+    image: "/my-project/aquagreen.jpeg",
+    link: "https://aquagreentechs.com/",
   }
 ];
 
