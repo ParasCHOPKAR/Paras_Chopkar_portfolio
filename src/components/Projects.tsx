@@ -137,6 +137,7 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4 }}
+              onClick={() => window.open(project.link, '_blank')}
               className="glass-card glass-card-hover overflow-hidden group cursor-pointer"
             >
               {/* Image Container */}
@@ -167,14 +168,11 @@ export default function Projects() {
                    <p className="text-xs text-primary-light font-mono bg-primary/10 px-3 py-1.5 rounded">
                      {project.tech}
                    </p>
-                   <a 
-                     href={project.link} 
-                     target="_blank" 
-                     rel="noopener noreferrer"
+                   <div 
                      className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
                    >
                      <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                   </a>
+                   </div>
                 </div>
               </div>
             </motion.div>
