@@ -2,26 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
+    --background: #f8f9fa;
+    --foreground: #111827;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-hover: rgba(243, 244, 246, 0.9);
+    --card-border: rgba(229, 231, 235, 1);
+    --primary: #e63946;
+    --primary-light: #ff4d5a;
+    --primary-dark: #a81c25;
+    --text-muted: #374151; /* Darker gray for light mode */
+    --text-subtle: #4b5563; /* Medium gray for light mode */
+  }
+
+  .dark {
+    --background: #090404;
     --foreground: #ededed;
+    --card-bg: rgba(30, 10, 10, 0.6);
+    --card-hover: rgba(50, 15, 15, 0.8);
+    --card-border: rgba(230, 57, 70, 0.2);
+    --primary: #e63946;
+    --primary-light: #ff4d5a;
+    --primary-dark: #a81c25;
+    --text-muted: #d1d5db; /* gray-300 */
+    --text-subtle: #9ca3af; /* gray-400 */
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground) !important;
+  background-color: var(--background) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Force updated colors since dev server hasn't picked up tailwind.config.ts yet */
+  .bg-background {
+    background-color: var(--background) !important;
+  }
+  .bg-background\/80 {
+    background-color: color-mix(in srgb, var(--background) 80%, transparent) !important;
+  }
+  .text-foreground {
+    color: var(--foreground) !important;
+  }
+  .text-muted {
+    color: var(--text-muted) !important;
+  }
+  .text-subtle {
+    color: var(--text-subtle) !important;
+  }
+  .bg-card {
+    background-color: var(--card-bg) !important;
+  }
+  
+  .glass-card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+    @apply border backdrop-blur-md rounded-2xl;
+  }
+  
+  .glass-card-hover {
+    @apply transition-all duration-300;
+  }
+  .glass-card-hover:hover {
+    background-color: var(--card-hover) !important;
+    border-color: var(--primary) !important;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
