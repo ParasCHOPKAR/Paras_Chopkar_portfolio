@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Mail, Code2, Rocket, Users, Star, Terminal } from "lucide-react";
+import { ArrowRight, Mail, Code2, Rocket, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
