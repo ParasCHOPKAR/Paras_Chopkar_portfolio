@@ -9,7 +9,7 @@ const experiences = [
     role: "Full Stack Developer",
     company: "Mind Axis",
     location: "Pune, India",
-    date: "Mar 2025 – Present",
+    date: "Jul 2026 – Present",
     timelineIcon: <Briefcase className="w-5 h-5 text-white" />,
     letter: "M",
     points: [
@@ -29,9 +29,9 @@ const experiences = [
   {
     id: 2,
     role: "Full Stack Developer Intern",
-    company: "DW Innovation Pvt. Ltd.",
+    company: "DW Innovation Pvt. Ltd. (Now Mind Axis)",
     location: "Pune, India",
-    date: "Apr 2024 – Feb 2025",
+    date: "Jun 2025 – Jun 2026",
     timelineIcon: <Briefcase className="w-5 h-5 text-white" />,
     letter: "D",
     points: [
